@@ -1,7 +1,7 @@
 # The Sonoma back end coding challenge
 
 Source code main points:
-## .\src\main\java\com\sonomainc\williams\ZipCodesRange.java{code}
+## .\src\main\java\com\sonomainc\williams\ZipCodesRange.java
 
    This class was introduced to encapsulate specific about domain we're normalizing ranges in - shipping/delivery/zip codes.
    Naturally, this class is right place to encapsulate validation for zip code range. Also, it adds
@@ -27,11 +27,14 @@ Source code main points:
    > gradlew clean build
 
    If everything goes smooth, jar with dependencies will appear in ./build/libs folder
-   Also, I include sonoma-challenge.jar in my response package.
-
+   
    Run sonoma-challenge.jar
 
    > java -jar sonoma-challenge.jar
 
    Create input like [95661,95662] [95433,95433] and verify results.
+
+## Code coverage and unit tests
+
+
 
