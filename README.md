@@ -41,7 +41,8 @@ Source code main points:
    > gradlew clean build
    
    Find code coverage report at ./build/reports/jacoco/test/html/index.html
-   Find unit tests report  at ./build/reports/tests/test/index.html
+   
+   Find unit tests report at ./build/reports/tests/test/index.html
 
 
  
