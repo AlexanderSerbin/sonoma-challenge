@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+}
+
+group 'com.sonomainc.williams'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+test {
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+
+    dependsOn test
+
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it,
+                    exclude: ['**/ChallengeEvaluatorHelper*']
+            )
+        }))
+    }}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.sonomainc.williams.ChallengeEvaluatorHelper'
+    }
+
+    archiveFileName = "sonoma-challenge.jar"
+
+    from {
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+}
+
+dependencies {
+
+    compile "org.apache.commons:commons-lang3:3.9"
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+}
