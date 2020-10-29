@@ -35,6 +35,18 @@ Source code main points:
    Create input like [95661,95662] [95433,95433] and verify results.
 
 ## Code coverage and unit tests
+   
+   Run from challenge response current folder
+
+   > gradlew clean build
+   
+   Find code coverage report at ./build/reports/jacoco/test/html/index.html
+   Find unit tests report  at ./build/reports/tests/test/index.html
+
+
+ 
+   
+  
 
 
 
