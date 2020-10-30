@@ -12,6 +12,7 @@ Source code main points:
     Main part of algorithm which normalizes collection of zip code ranges.
     Implementation's runtime is O(n * log n) since we sort ranges first in O(n * log n) runtime
     and then we one time traverse sorted collection to get ranges merged.
+    Space complexity is determined by space complexity of merge sort which is O(n)
 
 ## .\src\test\java\com\sonomainc\williams\ZipCodeRangesNormalizerTest.java
    .\src\test\java\com\sonomainc\williams\ZipCodesRangeTest.javajava/com/sonomainc/williams/ZipCodeRangesNormalizerTest.java
